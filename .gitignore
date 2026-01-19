@@ -35,14 +35,13 @@ Thumbs.db
 *.tar
 *.tar.gz
 
-# === Agent & Testing Artifacts ===
+# === Project Management & Agent Files ===
 .agent/
-tests/failure_*.png
-tests/test-results/
-tests/playwright-report/
-tests/blob-report/
-tests/video/
-tests/screenshot/
+docs/
+batch_progress.md
+batch_report.md
+session_state.json
+USER_MANUAL.md
 
 # === Temporary & Logs ===
 *.log
