@@ -6,11 +6,11 @@
 
 ```json
 {
-  "last_updated": "2026-01-19T14:40:00Z",
+  "last_updated": "2026-01-19T14:50:00Z",
   "status": "COMPLETED",
   "health_status": "STABLE", 
-  "total_epics": 8,
-  "completed_epics": 8,
+  "total_epics": 10,
+  "completed_epics": 10,
   "epics": [
     {
       "id": "EPIC-01",
@@ -51,12 +51,24 @@
     {
       "id": "EPIC-07",
       "title": "인프라 및 DB 인코딩 강화",
-      "status": "COMPLETED",
+      "status": "RUNNING",
       "retry_count": 0
     },
     {
       "id": "EPIC-08",
       "title": "웹/애플리케이션 레이어 최종 점검",
+      "status": "RUNNING",
+      "retry_count": 0
+    },
+    {
+      "id": "EPIC-09",
+      "title": "형상관리 및 환경 정제",
+      "status": "COMPLETED",
+      "retry_count": 0
+    },
+    {
+      "id": "EPIC-10",
+      "title": "공식 문서화 및 라이선스 구축",
       "status": "COMPLETED",
       "retry_count": 0
     }
