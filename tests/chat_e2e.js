@@ -23,8 +23,8 @@ const { chromium } = require('playwright');
   await pageB.waitForURL('**/chat.jsp');
   console.log('✅ User B: 입장 완료');
 
-  // === 대화 시나리오 ===
-  const msgA = 'Hello from UserA! (JSON Test)';
+  // === 대화 시나리오 (한글 인코딩 테스트) ===
+  const msgA = '안녕하세요 UserB님! 한글 잘 보이나요? (JSON 테스트)';
   console.log(`💬 User A -> User B: "${msgA}"`);
   await pageA.fill('#msg', msgA);
   await pageA.click('#btnSend');
@@ -40,7 +40,7 @@ const { chromium } = require('playwright');
     throw e;
   }
 
-  const msgB = 'Hi UserA! I see your message.';
+  const msgB = '네 아주 잘 보입니다! 리팩토링 성공이네요.';
   console.log(`💬 User B -> User A: "${msgB}"`);
   await pageB.fill('#msg', msgB);
   await pageB.click('#btnSend');

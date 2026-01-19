@@ -13,7 +13,7 @@ import java.sql.Statement;
  */
 public class DBManager {
     private Connection conn = null;
-    private String host = "jdbc:mysql://" + System.getenv().getOrDefault("DB_HOST", "127.0.0.1") + ":3306/chatdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC";
+    private String host = "jdbc:mysql://" + System.getenv().getOrDefault("DB_HOST", "127.0.0.1") + ":3306/chatdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true";
     private String userid = "root";
     private String passwd = "ezen";
 

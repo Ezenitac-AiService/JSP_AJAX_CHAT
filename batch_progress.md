@@ -6,45 +6,57 @@
 
 ```json
 {
-  "last_updated": "2026-01-19T14:30:00Z",
+  "last_updated": "2026-01-19T14:40:00Z",
   "status": "COMPLETED",
   "health_status": "STABLE", 
-  "total_epics": 6,
-  "completed_epics": 6,
+  "total_epics": 8,
+  "completed_epics": 8,
   "epics": [
     {
       "id": "EPIC-01",
       "title": "인프라 및 환경 설정",
-      "status": "COMPLETED", 
+      "status": "RUNNING", 
       "retry_count": 0
     },
     {
       "id": "EPIC-02",
       "title": "데이터 소스 및 DB 로직 개선",
-      "status": "COMPLETED",
+      "status": "RUNNING",
       "retry_count": 0
     },
     {
       "id": "EPIC-03",
       "title": "프론트엔드 UI 리뉴얼",
-      "status": "COMPLETED",
+      "status": "RUNNING",
       "retry_count": 0
     },
     {
       "id": "EPIC-04",
       "title": "API 및 AJAX 로직 고도화",
-      "status": "COMPLETED",
+      "status": "RUNNING",
       "retry_count": 0
     },
     {
       "id": "EPIC-05",
       "title": "도커 기반 통합 환경 구축",
-      "status": "COMPLETED",
+      "status": "RUNNING",
       "retry_count": 0
     },
     {
       "id": "EPIC-06",
       "title": "Playwright E2E 테스트 구현 및 실행",
+      "status": "RUNNING",
+      "retry_count": 0
+    },
+    {
+      "id": "EPIC-07",
+      "title": "인프라 및 DB 인코딩 강화",
+      "status": "COMPLETED",
+      "retry_count": 0
+    },
+    {
+      "id": "EPIC-08",
+      "title": "웹/애플리케이션 레이어 최종 점검",
       "status": "COMPLETED",
       "retry_count": 0
     }

@@ -17,4 +17,4 @@ COPY build/classes/ /usr/local/tomcat/webapps/ROOT/WEB-INF/classes/
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["catalina.sh", "run", "-Dfile.encoding=UTF-8"]
