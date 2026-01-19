@@ -3,11 +3,11 @@
   "started_at": "2026-01-19T14:16:17Z",
   "last_updated": "2026-01-19T14:16:17Z",
   "mode": "batch_all_epics",
-  "current_epic": "EPIC-01",
-  "current_task": "TASK-01-01",
-  "completed_epics": [],
+  "current_epic": "EPIC-02",
+  "current_task": "TASK-02-01",
+  "completed_epics": ["EPIC-01"],
   "failed_tasks": [],
-  "context_summary": "AJAX 채팅 프로젝트 리팩토링 시작. Java 17, MySQL 8.0/Docker, Tailwind CSS 도입 예정.",
+  "context_summary": "EPIC-01 (인프라 설정) 완료. Docker MySQL 환경 구축 및 연결 확인됨. 이제 EPIC-02 (DB 로직 개선) 시작 예정.",
   "key_decisions": [
     "JSP/AJAX 유지하되 통신 포맷을 XML에서 JSON으로 변경 결정",
     "Java 17의 최신 기능을 활용하여 리팩토링 진행"

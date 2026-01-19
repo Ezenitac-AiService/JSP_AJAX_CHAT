@@ -10,12 +10,12 @@
   "status": "RUNNING",
   "health_status": "STABLE", 
   "total_epics": 4,
-  "completed_epics": 0,
+  "completed_epics": 1,
   "epics": [
     {
       "id": "EPIC-01",
       "title": "인프라 및 환경 설정",
-      "status": "PENDING", 
+      "status": "COMPLETED", 
       "retry_count": 0
     },
     {
