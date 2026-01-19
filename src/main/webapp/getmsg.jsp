@@ -1,37 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="ezen.*" %>
-<chatmsg>
+<%@ page language="java" contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="ezen.*, java.util.*, com.google.gson.Gson" %>
 <%
-	String no = request.getParameter("cno");
-if(no == null) no = "0";
+    String no = request.getParameter("cno");
+    if (no == null) no = "0";
 
-ezen.DBManager dbms = new ezen.DBManager();
-dbms.DBOpen();
-String sql = "";
-sql  = "select cno,cdate,cname,cnote ";
-sql += "from chat ";
-sql += "where cno > " + no + " ";
-sql += "order by cno asc ";
-dbms.OpenQuery(sql);
-while(dbms.GetNext() == true)
-{
-	String cno   = dbms.GetValue("cno");
-	String cdate = dbms.GetValue("cdate");
-	String cname = dbms.GetValue("cname");
-	String cnote = dbms.GetValue("cnote");
-	
-	cnote = cnote.replace("<","&lt;");
-	cnote = cnote.replace(">","&gt;");
+    List<ChatDTO> messages = new ArrayList<>();
+    DBManager dbms = new DBManager();
+    
+    if (dbms.DBOpen()) {
+        String sql = "select cno, cdate, cname, cnote from chat where cno > ? order by cno asc";
+        if (dbms.OpenQuery(sql, Integer.parseInt(no))) {
+            while (dbms.GetNext()) {
+                ChatDTO dto = new ChatDTO(
+                    dbms.GetInt("cno"),
+                    dbms.GetValue("cdate"),
+                    dbms.GetValue("cname"),
+                    dbms.GetValue("cnote")
+                );
+                messages.add(dto);
+            }
+            dbms.CloseQuery();
+        }
+        dbms.DBClose();
+    }
+
+    Gson gson = new Gson();
+    String json = gson.toJson(messages);
+    out.print(json);
 %>
-	<msg>
-		<no><%= cno %></no>
-		<name><%= cname %></name>
-		<note><%= cnote %></note>
-		<wdate><%= cdate %></wdate>
-	</msg>
-	<%
-}
-dbms.CloseQuery();
-dbms.DBClose();
-%>
-</chatmsg>

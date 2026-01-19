@@ -35,10 +35,10 @@
 ## 🔗 EPIC-04: API 및 AJAX 로직 고도화
 > XML에서 JSON으로의 통신 규격 변경 및 프론트엔드 스크립트 최적화
 
-- [ ] TASK-04-01: `sendmsg.jsp` 리팩토링
+- [x] TASK-04-01: `sendmsg.jsp` 리팩토링
   - 세션 체크 강화 및 `PreparedStatement` 적용
-- [ ] TASK-04-02: `getmsg.jsp` 리팩토링
+- [x] TASK-04-02: `getmsg.jsp` 리팩토링
   - XML 태그 생성 로직 제거 -> `Gson`을 활용한 JSON 응답 처리
-- [ ] TASK-04-03: `chat.js` 고도화
+- [x] TASK-04-03: `chat.js` 고도화
   - XML 파싱 코드 제거 및 JSON 오브젝트 처리 로직 구현
   - 메시지 수신 시 스크롤 최하단 이동 애니메이션 추가

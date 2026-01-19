@@ -1,17 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="ezen.*" %>
 <%
-	response.setCharacterEncoding("UTF-8");
-	String msg = request.getParameter("msg");
-if(msg == null) return ;
+    request.setCharacterEncoding("UTF-8");
+    String msg = request.getParameter("msg");
+    String nick = (String)session.getAttribute("nick");
 
-String nick = (String)session.getAttribute("nick");
+    if (nick == null || msg == null || msg.trim().isEmpty()) {
+        out.print("{\"status\": \"error\", \"message\": \"Invalid session or message\"}");
+        return;
+    }
 
-ezen.DBManager dbms = new ezen.DBManager();
-dbms.DBOpen();
-String sql = "";
-sql  = "insert into chat (cname,cnote) ";
-sql += "value ('" + nick + "','" + msg + "') ";
-dbms.RunSQL(sql);
-dbms.DBClose();
+    DBManager dbms = new DBManager();
+    if (dbms.DBOpen()) {
+        String sql = "insert into chat (cname, cnote) values (?, ?)";
+        boolean success = dbms.RunSQL(sql, nick, msg);
+        dbms.DBClose();
+        
+        if (success) {
+            out.print("{\"status\": \"success\"}");
+        } else {
+            out.print("{\"status\": \"error\", \"message\": \"Database error\"}");
+        }
+    } else {
+        out.print("{\"status\": \"error\", \"message\": \"Connection error\"}");
+    }
 %>

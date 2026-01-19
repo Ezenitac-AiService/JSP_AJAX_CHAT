@@ -30,6 +30,16 @@
         body { font-family: 'Inter', 'Noto Sans KR', sans-serif; }
         .chat-container { height: calc(100vh - 180px); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fadeInRight { animation: fadeInRight 0.3s ease-out; }
+        .animate-fadeInLeft { animation: fadeInLeft 0.3s ease-out; }
     </style>
 </head>
 <body class="bg-gray-100 h-screen flex flex-col">
