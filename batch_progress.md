@@ -10,7 +10,7 @@
   "status": "RUNNING",
   "health_status": "STABLE", 
   "total_epics": 4,
-  "completed_epics": 2,
+  "completed_epics": 3,
   "epics": [
     {
       "id": "EPIC-01",
@@ -27,7 +27,7 @@
     {
       "id": "EPIC-03",
       "title": "프론트엔드 UI 리뉴얼",
-      "status": "PENDING",
+      "status": "COMPLETED",
       "retry_count": 0
     },
     {

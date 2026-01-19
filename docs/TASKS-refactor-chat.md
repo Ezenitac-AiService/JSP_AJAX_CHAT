@@ -25,10 +25,10 @@
 ## 🎨 EPIC-03: 프론트엔드 UI 리뉴얼
 > Tailwind CSS를 활용한 모던하고 세련된 사용자 인터페이스 시각화
 
-- [ ] TASK-03-01: 기본 레이아웃 및 Tailwind CSS CDN 도입 (또는 CLI 설정 제안)
-- [ ] TASK-03-02: `join.jsp` 리뉴얼
+- [x] TASK-03-01: 기본 레이아웃 및 Tailwind CSS CDN 도입 (또는 CLI 설정 제안)
+- [x] TASK-03-02: `join.jsp` 리뉴얼
   - 깔끔한 카드 스타일의 닉네임 입력 폼 디자인
-- [ ] TASK-03-03: `chat.jsp` 리뉴얼
+- [x] TASK-03-03: `chat.jsp` 리뉴얼
   - 카카오톡 스타일의 좌/우 말풍선 UI 적용
   - 하단 고정형 메시지 입력창 및 자동 스크롤 기능
 
