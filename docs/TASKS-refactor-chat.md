@@ -15,12 +15,12 @@
 ## 🗄️ EPIC-02: 데이터 소스 및 DB 로직 개선
 > SQL Injection 방지 및 코드 가독성을 위한 JDBC 클래스 현대화
 
-- [ ] TASK-02-01: `DBManager.java` 리팩토링
+- [x] TASK-02-01: `DBManager.java` 리팩토링
   - `PreparedStatement` 기반의 `RunSQL`, `OpenQuery` 메서드 추가
   - Java 17의 `try-with-resources` 문법 적용
-- [ ] TASK-02-02: `ChatDTO.java` 데이터 객체(POJO) 생성
+- [x] TASK-02-02: `ChatDTO.java` 데이터 객체(POJO) 생성
   - 훈련생들이 객체 지향 프로그래밍 기초를 익힐 수 있도록 설계
-- [ ] TASK-02-03: JSON 처를 위한 라이브러리(Gson) 추가 및 JSP 연동 준비
+- [x] TASK-02-03: JSON 처를 위한 라이브러리(Gson) 추가 및 JSP 연동 준비
 
 ## 🎨 EPIC-03: 프론트엔드 UI 리뉴얼
 > Tailwind CSS를 활용한 모던하고 세련된 사용자 인터페이스 시각화

@@ -10,7 +10,7 @@
   "status": "RUNNING",
   "health_status": "STABLE", 
   "total_epics": 4,
-  "completed_epics": 1,
+  "completed_epics": 2,
   "epics": [
     {
       "id": "EPIC-01",
@@ -21,7 +21,7 @@
     {
       "id": "EPIC-02",
       "title": "데이터 소스 및 DB 로직 개선",
-      "status": "PENDING",
+      "status": "COMPLETED",
       "retry_count": 0
     },
     {
